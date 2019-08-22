@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app
+
+  template: 
+    metadata:
+      labels:
+        app:  app
+    spec:
+      containers: 
+      - name: php-swoole
+        image:  docker.io/pweslly/swoole
+        ports:
+          - containerPort: 80
