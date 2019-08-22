@@ -1,0 +1,10 @@
+cd /home/servidor/.kube && kubectl --kubeconfig="digital-ocean-k8s-kubeconfig.yaml" get nodes
+
+Acessar pasta /etc/environment
+Adicionar esse comando 
+KUBECONFIG = /root/.kube/nome-do-meu-arquivo-config-da-digital-ocean.yaml
+
+depois dá kubectl get pods ou kubectl config view 
+para ver se conectou.
+
+Esse comando printenv é para ver as variaveis de ambiente

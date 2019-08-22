@@ -7,7 +7,7 @@ $http->on("start", function ($server) {
 
 $http->on("request", function ($request, $response) {
     $response->header("Content-Type", "text/plain");
-    $response->end("Ola mundo\n");
+    $response->end("Ola meu servidor on-line\n");
 });
 
 $http->start();
